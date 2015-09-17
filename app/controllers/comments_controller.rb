@@ -14,8 +14,8 @@ class CommentsController < ApplicationController
 #create
   def create
     @post = Post.find(params[:post_id])
-    @comment = Comment.create!(comment_params.merge(artist: @artist))
-    redirect_to post_song_path(@post, @comment)
+    @comment = Comment.create!(comment_params.merge(post: @post))
+    redirect_to post_comment_path(@post, @comment)
   end
 
   #show page
@@ -32,7 +32,7 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     @post = Post.find(params[:post_id])
-    @comment.update(song_params.merge(post: @post))
+    @comment.update(comment_params.merge(post: @post))
     redirect_to post_comment_path(@comment.post, @comment)
   end
 
