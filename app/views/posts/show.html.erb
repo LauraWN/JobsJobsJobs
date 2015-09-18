@@ -7,7 +7,7 @@
 <ul>
   <% @post.comments.each do |comment| %>
     <li>
-      <%= link_to "#{comment.title} (#{comment.album})", post_comment_path(@post, comment) %>
+      <%= link_to "#{comment.title} (#{comment.content})", post_comment_path(@post, comment) %>
     </li>
 
   <% end %>
