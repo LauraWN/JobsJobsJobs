@@ -1,4 +1,6 @@
-<h2><%= @comment.title %> <a href="/comments/<%= @comment.id %>/edit">(edit)</a></h2>
-<h3>By: <%= @comment.post.title %></h3>
+<h2>
+  <%= @comment.title %> <a href="/comments/<%= @comment.id %>/edit">(edit)</a>
+</h2>
+<h3>Title: <%= @comment.post.title %></h3>
 
-Comment: <%= @comment.content %></br>
+<h4>Comment: <%= @comment.content %></h4>
