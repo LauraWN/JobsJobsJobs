@@ -16,7 +16,6 @@
 
  body{
     font-family: sans-serif;
-    font-color: #5c31ff;
     padding:1em;
     background-color: #8c9AFF;
   }
@@ -30,9 +29,14 @@
 
   nav a:hover {
     background-color: orange;
-    color: blue;
+    color: #fff;
   }
 
+  a {
+    text-decoration: none;
+    position: relative;
+    color: #3366ff;
+  }
   a, a:visited {
     text-decoration: none;
     color: blue;
@@ -48,19 +52,26 @@
 
   li {
     margin: 1em;
-    background-color: #
+    color: #3366ff;
   }
 
   h1 {
-    color: inherit;
     border:1px solid black;
-    padding: 1em;
+    padding: 2em;
     margin: 2em;
     background-color: #5c31ff;
   }
 
+  h2 {
+    padding: 1em;
+    margin: 2em;
+  }
+
   h2 > a {
-    font-size: 1em;
+    font-size: .5em;
+    border: 1px solid black;
+    padding: 1em;
+    margin: 2em;
   }
 
   input {
