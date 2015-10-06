@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Job Lead and Info Board</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<h1>Jobs Lead and Info Board</h1>
-<nav>
-  <a href="/comments">Comments</a>
-  <a href="/posts">Posts</a>
-</nav>
-
-<%= yield %>
-
-</body>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Jobsjobsjobs" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Jobsjobsjobs" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+    </main>
+  </body>
 </html>
